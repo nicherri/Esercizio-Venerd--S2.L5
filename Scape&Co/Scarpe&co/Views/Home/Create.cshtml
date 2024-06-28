@@ -1,0 +1,42 @@
+﻿@model Scarpe_co.ViewModels.ArticleViewModel
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card border border-primary">
+                <div class="card-header">
+                    <h4>Create New Article</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div class="form-group mb-3">
+                            <label asp-for="Name" class="form-label">Nome</label>
+                            <input asp-for="Name" class="form-control border border-1 border-info-subtle bg-body-secondary" placeholder="Nome dell'Articolo" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Price" class="form-label">Prezzo</label>
+                            <input asp-for="Price" class="form-control border border-1 border-info-subtle bg-body-secondary" placeholder="Prezzo" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Description" class="form-label">Descrizione</label>
+                            <textarea asp-for="Description" class="form-control border border-1 border-info-subtle bg-body-secondary" placeholder="Scrivi qui la descrizione dell'articolo..."></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="CoverImage" class="form-label"> Cover Immagine</label>
+                            <input asp-for="CoverImage" type="file" class="form-control-file " />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="AdditionalImage1" class="form-label">Immagine 1</label>
+                            <input asp-for="AdditionalImage1" type="file" class="form-control-file" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="AdditionalImage2" class="form-label">Immagine 2</label>
+                            <input asp-for="AdditionalImage2" type="file" class="form-control-file" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

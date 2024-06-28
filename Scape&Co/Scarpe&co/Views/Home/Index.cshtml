@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Scarpe_co.Models.Article>
+
+<div class="row">
+    @foreach (var article in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="@article.CoverImage" class="card-img-top" alt="@article.Name">
+                <div class="card-body">
+                    <h5 class="card-title">@article.Name</h5>
+                    <p class="card-text">@article.Price.ToString("C")</p>
+                    <a href="@Url.Action("Details", new { id = article.Id })" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
